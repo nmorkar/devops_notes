@@ -1,0 +1,60 @@
+https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe
+
+https://the.earth.li/~sgtatham/putty/latest/w64/puttygen.exe
+
+#!/bin/bash
+mkdir /home/ubuntu/test
+mkdir /home/ubuntu/test2
+
+
+
+sudo su
+apt-get update
+
+apt-get install apache2
+cd /var/www/html
+
+
+
+git config --global user.name "Your Name"
+git config --global user.email "Your email"
+
+
+
+
+
+
+
+Create a set of SSH key for the machine using following command
+  ssh-keygen
+Now this has generated pair of keys, one is public & other is private
+Now we need to copy the public key and add it in the deploy key
+section of our remote repo
+The location of our keys will be  /root/.ssh/
+Copy the content of id_rsa.pub
+Add the copied key in your respective repository.
+If you are using older repositories, you need to add the remote for
+SSH url.
+so add using git remote add origin (your_url)
+then try pushing your code
+
+
+git remote add origin (your repo url)
+git push origin master
+
+
+apt-get install awscli
+ 
+aws configure
+
+aws ec2 describe-instances
+
+
+aws ec2 run-instances --image-id ami-1a2b3c4d --count 1 --instance-type t2.micro --key-name MyKeyPair --security-groups MySecurityGroup
+aws ec2 run-instances --image-id ami-0c55b159cbfafe1f0  --count 1 --instance-type t2.micro --key-name MyKeyPair --security-groups MySecurityGroup
+
+aws ec2 run-instances --image-id ami-0c55b159cbfafe1f0 --count 1 --instance-type t2.micro --key-name nimawskey --security-groups launch-wizard-4
+  
+
+https://github.com/anotherangle/new-relic-agent-ansible-role/blob/master/new_relic_agent/tasks/main.yml
+
