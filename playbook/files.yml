@@ -1,0 +1,13 @@
+---
+- hosts: web
+  tasks: 
+    - name: Create file
+      file: 
+        name: /home/ubuntu/test
+        state: touch
+    - name: Create directory
+      file:
+        name: /home/ubuntu/t1
+        mode: 777
+        state: directory
+

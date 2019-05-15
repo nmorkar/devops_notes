@@ -5,3 +5,7 @@
       package:
         name: ntp
         state: present
+    - name: NTP Service check
+      service:
+        name: ntp
+        state: started  
