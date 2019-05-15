@@ -1,0 +1,11 @@
+---
+- hosts: web
+  vars:
+    filename: index2.html
+  tasks:
+    - name: Copy File {{ filename }}
+      copy:
+        src: "/home/ubuntu/devop_notes/{{ filename }}"
+        dest: /var/www/html
+
+

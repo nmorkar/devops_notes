@@ -1,0 +1,13 @@
+---
+- hosts: web
+  tasks:
+    - name: Copy File
+      copy:
+        src: /home/ubuntu/devop_notes/index.html
+        dest: /var/www/html
+    - name: Copy via Template module
+      template:
+        src: /home/ubuntu/devop_notes/index.html.j2
+        dest: /var/www/html/webapp/index.html
+
+
