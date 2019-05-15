@@ -1,0 +1,12 @@
+---
+- hosts: web
+  tasks:
+    - name: Create a user
+      user:
+        name: synechron
+        state: present
+    - name: Create a group
+      group:
+        name: synegroup
+        state: present
+
