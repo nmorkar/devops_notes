@@ -1,0 +1,7 @@
+---
+- hosts: web
+  tasks:
+    - name: Install NTP 
+      package:
+        name: ntp
+        state: present
