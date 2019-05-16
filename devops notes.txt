@@ -1,0 +1,19 @@
+Services may vary from region to region.
+Charges may differ from region to region.
+
+Default users
+ec2-user		RHEL, CentOS OS
+ubuntu			Ubuntu OS
+Administrator	Windows OS
+
+ec2-52-15-195-131.us-east-2.compute.amazonaws.com
+52.15.195.131
+
+
+ec2-3-16-13-171.us-east-2.compute.amazonaws.com
+
+Administrator
+XhwbsZ7pgH9tIjW&d!7Zrf5zpMi%st?n
+
+ec2-3-16-13-171.us-east-2.compute.amazonaws.com
+	
