@@ -1,0 +1,638 @@
+    1  clear
+    2  apt-get update
+    3  apt-get install apache2
+    4  service apache status
+    5  service apaches status
+    6  service apache2 status
+    7  cd /var/www/html/
+    8  ls
+    9  mv index.html index1.html
+   10  ls
+   11  vi index.html
+   12  ls
+   13  cd
+   14  clear
+   15  apt-get install git
+   16  git -version
+   17  git --version
+   18  ls
+   19  cd /home/
+   20  ls
+   21  cd ubuntu/
+   22  ls
+   23  clear
+   24  git config --global user.name "Nimesh Morkar"
+   25  git config --global user.email "nmorkar@gmail.com"
+   26  git config -l
+   27  mkdir repo
+   28  cd repo/
+   29  \
+   30  git init
+   31  ls -a
+   32  vi abc.txt
+   33  ls
+   34  git status
+   35  git add abc.txt 
+   36  git status
+   37  git commit -m "my first commit"
+   38  git status
+   39  vi abc.txt
+   40  gits tatus
+   41  git status
+   42  git log
+   43  git commit -a
+   44  git log
+   45  git branch
+   46  git branch training
+   47  git branch
+   48  git branch -d training
+   49  git branch
+   50  git branch training
+   51  git branch
+   52  git checkout training
+   53  git branch
+   54  git status
+   55  ls
+   56  vi xyz.txt
+   57  git status
+   58  git add .
+   59  git commit -m "training branch commit"
+   60  git status
+   61  ls
+   62  git checkout master
+   63  ls
+   64  git status
+   65  clear
+   66  git status
+   67  git checkout training
+   68  git status
+   69  git checkout master
+   70  git status
+   71  git merge training
+   72  git status
+   73  ls
+   74  git status
+   75  ls
+   76  vi abc.txt 
+   77  git add abc.txt 
+   78  git commit -m "test merge"
+   79  git checkout training
+   80  vi abc.txt 
+   81  git add abc.txt 
+   82  git commit -m "test merge train"
+   83  git status
+   84  git checkout master
+   85  clear
+   86  git status
+   87  git merge training
+   88  vi abc.txt 
+   89  git add abc.txt 
+   90  git commit -m "conflict solved"
+   91  git status
+   92  ls
+   93  cat abc.txt 
+   94  git status
+   95  ls
+   96  touch 1.txt
+   97  touch 2.txt
+   98  git checkout training
+   99  ls
+  100  git rebase master
+  101  ls
+  102  git status
+  103  git checkout master
+  104  ls
+  105  touch 3.txt
+  106  git checkout training
+  107  ls
+  108  git status
+  109  git checkout master
+  110  git add .
+  111  git commit -m "new files"
+  112  git status
+  113  git checkout training
+  114  ls
+  115  git rebase training
+  116  git rebase master
+  117  ls
+  118  git status
+  119  git checkout master
+  120  touch 4.txt
+  121  git add.
+  122  git add .
+  123  git commit -m "test rebase"
+  124  git status
+  125  ls
+  126  git checkout training
+  127  ls
+  128  git merge master
+  129  ls
+  130  git status
+  131  git logs
+  132  git log
+  133  clear
+  134  git status
+  135  apt-get install awscli
+  136  aws --version
+  137  aws ec2 run-insta
+  138  aws ec2 describe-instances
+  139  aws ec2 run-instance ami-0c55b159cbfafe1f0 --count 1 --instances-type t2.micro --key-name nimawskey --security-groups launch-wizard-4
+  140  aws ec2 run-instances ami-0c55b159cbfafe1f0 --count 1 --instances-type t2.micro --key-name nimawskey --security-groups launch-wizard-4
+  141  aws ec2 run-instances ami-0c55b159cbfafe1f0 --count 1 --instance-type t2.micro --key-name nimawskey --security-groups launch-wizard-4
+  142  aws ec2 run-instances --image-id ami-0c55b159cbfafe1f0 --count 1 --instance-type t2.micro --key-name nimawskey --security-groups launch-wizard-4
+  143  history
+  144  cd
+  145  ls
+  146  cledar
+  147  clear
+  148  apt-get install mysql-client
+  149  mysql -h apt-get install mysql-client
+  150  clear
+  151  mysql -h mydb.c6bzekx5tp5y.us-east-2.rds.amazonaws.com
+  152  mysql -h mydb.c6bzekx5tp5y.us-east-2.rds.amazonaws.com -u root -p 
+  153  clear
+  154  apt-get update
+  155  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+  156  apt-add-repository "deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main"
+  157  apt-get update
+  158  apt-get install anisble
+  159  apt-get install ansible
+  160  ansible --version
+  161  cat /etc/ansible/ansible.cfg
+  162  clear
+  163  cd /etc/ansible/
+  164  ls
+  165  cd hosts 
+  166  ls
+  167  cat hosts 
+  168  clear
+  169  less hosts 
+  170  ls
+  171  less ansible.cfg 
+  172  hostname
+  173  ansible --version
+  174  hostnamectl set-hostname master.example.com
+  175  hostname
+  176  exit
+  177  clear
+  178  ssh-keygen
+  179  cd /root/.ssh/
+  180  ls
+  181  ssh client.example.com
+  182  cat id_rsa.pub 
+  183  ssh 18.191.56.195
+  184  ssh client.example.com
+  185  clear
+  186  ssh 172.31.28.78
+  187  ssh root@172.31.28.78
+  188  cd
+  189  cat /etc/host
+  190  cat /etc/hosts
+  191  vi /etc/hosts
+  192  ssh client
+  193  clear
+  194  vi /etc/ansible/hosts 
+  195  ansible web -m ping
+  196  cat /etc/ansible/hosts
+  197  ansible web -m setup
+  198  clear
+  199  ansible-doc
+  200  ansible-docs
+  201  ansible-doc
+  202  ansible-doc -a
+  203  ansible web -a "uname -a"
+  204  ansible web -a "ls"
+  205  ansible web -a "ls /tmp"
+  206  ansible web -a "apt-get update"
+  207  ansible web -a "useradd nimesh"
+  208  ansible web -m user -a "name=nimesh state=present"
+  209  ansible-doc user
+  210  clear
+  211  ansible web -m user -a "name=nimesh1 state=present"
+  212  ansible web -m file -a "name=/tmp/nim state=touch"
+  213  ansible web -a "ls /tmp"
+  214  ansible web -m file -a "name=/tmp/nim state=touch"
+  215  ansible-doc file
+  216  clear
+  217  ls
+  218  cd /home/ubuntu/
+  219  ls
+  220  clear
+  221  mkdir devop_notes
+  222  cd devop_notes/
+  223  mkdir playbook
+  224  cd playbook/
+  225  vi user.yml
+  226  ansible user.yml syntax-check
+  227  ansible user.yml --syntax-check
+  228  ansible-playbook user.yml --syntax-check
+  229  clear
+  230  ansible-playbook user.yml --syntax-check
+  231  ansible-playbook user.yml --check
+  232  cd..
+  233  ls
+  234  cd ..
+  235  ls
+  236  git init
+  237  git remote add origin https://github.com/nmorkar/devops_notes.git
+  238  git push -u origin master
+  239  cat /root/.ssh/id_rsa.pub 
+  240  git push -u origin master
+  241  git status
+  242  git add .
+  243  git commmit -m "added playbook"
+  244  git push -u origin master
+  245  clear
+  246  cd playbook/
+  247  ls
+  248  ansible-playbook user.yml 
+  249  git status
+  250  git remote -v
+  251  git config user.name "nimesh morkar"
+  252  git config user.email "nmorkar@gmail.com"
+  253  git config -l
+  254  git remote add origin https://github.com/nmorkar/devops_notes.git
+  255  git push -u origin master
+  256  git pull
+  257  git remote add origin git@github.com:nmorkar/devops_notes.git
+  258  git remote update origin git@github.com:nmorkar/devops_notes.git
+  259  git remote -v
+  260  git remote
+  261  git remote -h
+  262  git remote remove origin
+  263  git remote -v
+  264  git remote add origin git@github.com:nmorkar/devops_notes.git
+  265  git remote -v
+  266  git push -u origin master
+  267  cledar
+  268  clear
+  269  l
+  270  vi user.yml 
+  271  ansible-playbook user.yml --check
+  272  ansible-playbook user.yml
+  273  git status
+  274  git add .
+  275  git status
+  276  git commit -m "udpated"
+  277  git push origin master
+  278  clear
+  279  l
+  280  ls
+  281  ansible-playbook user.yml
+  282  ls
+  283  vi ntp.yml
+  284  ansible-playbook ntp.yml --check
+  285  vi ntp.yml
+  286  ansible-playbook ntp.yml --check
+  287  vi ntp.yml
+  288  ansible-playbook ntp.yml --check
+  289  vi ntp.yml
+  290  ansible-playbook ntp.yml --check
+  291  vi ntp.yml
+  292  ssh client
+  293  ansible --version
+  294  vi ntp.yml
+  295  ansible-playbook ntp.yml --check
+  296  ansible-playbook ntp.yml 
+  297  ansible-playbook ntp.yml --check
+  298  git status
+  299  git add ntp.yml
+  300  ls
+  301  cat ntp.retry
+  302  ls
+  303  rm ntp.retry
+  304  ls
+  305  clear
+  306  git status
+  307  git commit -m "ntp playbook added"
+  308  git push origin mater
+  309  git push origin master
+  310  clear
+  311  ansible-playbook ntp.yml --check
+  312  ansible-playbook ntp.yml
+  313  ansible-playbook ntp.yml --syntex-check
+  314  ansible-playbook ntp.yml --syntax-check
+  315  vi ntp.yml 
+  316  ansible-playbook ntp.yml --syntax-check
+  317  ansible-playbook ntp.yml
+  318  vi ntp.yml 
+  319  ansible-playbook ntp.yml
+  320  vi ntp.yml 
+  321  ansible-playbook ntp.yml
+  322  vi ntp.yml 
+  323  ansible-playbook ntp.yml
+  324  vi files.yml
+  325  ansible-playbook files.yml 
+  326  vi files.yml
+  327  ansible-playbook files.yml 
+  328  ansible-playbook -m file -a "ls /home/ubuntu"
+  329  ansible -m file -a "ls /home/ubuntu"
+  330  history
+  331  ansible web -m file -a "ls /home/ubuntu"
+  332  ansible web -a "ls /home/ubuntu"
+  333  clear
+  334  ansible web -a "ls /home/ubuntu"
+  335  ansible-playbook files.yml 
+  336  cd ..
+  337  history >> history.txt
+  338  ls
+  339  git status
+  340  git add.
+  341  git add .
+  342  git status
+  343  git commit -m "updated"
+  344  git push origin master
+  345  git status
+  346  clear
+  347  cd playbook/
+  348  ls
+  349  vi task.yml
+  350  ansible-playbook task.yml --check
+  351  vi task.yml
+  352  ansible-playbook task.yml --check
+  353  ansible-playbook task.yml
+  354  ansible web -a "ls /var/www/html"
+  355  ansible web -a "ls /var/www/html/webapp"
+  356  ansible web -m setup | grep ansible_hostname
+  357  vi copy.yml
+  358  cd ..
+  359  ls
+  360  vi index.html
+  361  vi index.html.j2
+  362  cd playbook/
+  363  ansible-playbook copy.yml --check
+  364  vi copy.yml
+  365  ansible-playbook copy.yml --check
+  366  ansible-playbook copy.yml
+  367  ls
+  368  ls -ltr
+  369  git status
+  370  vi task.yml 
+  371  cp task.yml task1.yml
+  372  vi task1.yml 
+  373  ansible-playbook task1.yml --check
+  374  cat task1.yml 
+  375  cd ..
+  376  ls
+  377  clear
+  378  ls
+  379  cat index.html
+  380  cd playbook/
+  381  cp copy.yml handler.yml
+  382  ls
+  383  vi handler.yml 
+  384  ansible-playbook handler.yml --check
+  385  vi handler.yml 
+  386  ansible-playbook handler.yml --check
+  387  cd ..
+  388  ls
+  389  vi index.html
+  390  cd playbook/
+  391  ansible-playbook handler.yml --check
+  392  ansible-playbook handler.yml
+  393  vi copy.yml 
+  394  cp copy.yml variable.yml
+  395  vi variable.yml 
+  396  ansible-playbook variable.yml --check
+  397  vi variable.yml 
+  398  ansible-playbook variable.yml --check
+  399  vi variable.yml 
+  400  ansible-playbook variable.yml --check
+  401  vi variable.yml 
+  402  touch ../index2.html
+  403  ansible-playbook variable.yml --check
+  404  vi loops.yml
+  405  ansible-playbook loops.yml --check
+  406  vi loops.yml
+  407  ansible-playbook loops.yml --check
+  408  vi loops.yml
+  409  ansible-playbook loops.yml --check
+  410  ansible-playbook loops.yml
+  411  ssh client
+  412  clear
+  413  ansible-playbook loops.yml
+  414  vi conditional.yml
+  415  git status
+  416  rm copy.retry task.retry variable.retry 
+  417  git status
+  418  git add .
+  419  git commit -m "updated"
+  420  git status
+  421  git add ../.
+  422  git status
+  423  git commit -m "updated"
+  424  git status
+  425  git push origin master
+  426  git status
+  427  clear
+  428  exitr
+  429  exit
+  430  apt-get update
+  431  apt-get install docker.io
+  432  docker --version
+  433  ifconfig
+  434  docker run ubuntu
+  435  docker ps -a
+  436  docker ps
+  437  docker start 052e263ea1ca
+  438  docker ps
+  439  docker ps -a
+  440  docker images
+  441  docker pull centos
+  442  docker images
+  443  docker run centos
+  444  docker ps
+  445  docker ps -a
+  446  docker run -it ubuntu
+  447  docker ps
+  448  docker attach 78a6628c4a52
+  449  docker ps
+  450  docker run -d ngnix
+  451  docker run -d nginx
+  452  docker ps
+  453  docker run  nginx
+  454  clear
+  455  docker ps
+  456  docker stop 1b42deca5529
+  457  docker ps
+  458  docker start 1b42deca5529
+  459  docker ps
+  460  docker ps -q
+  461  docker rm 1b42deca5529
+  462  docker stop 1b42deca5529
+  463  docker rm 1b42deca5529
+  464  docker ps -q
+  465  docker ps -a
+  466  docker ps
+  467  docker rm 052e263ea1ca
+  468  docker ps -a
+  469  docker images
+  470  docker images -a
+  471  docker images -q
+  472  docker images -help
+  473  docker images
+  474  docker rmi 9f38484d220f
+  475  clear
+  476  docker ps
+  477  docker inspect 78a6628c4a52
+  478  docker images
+  479  docker start 53f3fd8007f7
+  480  docker run  ngnix
+  481  docker run  nginx
+  482  docker run  nginx -d
+  483  docker run -d  nginx
+  484  docker ps
+  485  docker exec -it 66ed1d36ccde /bin/bash
+  486  docker ps
+  487  docker inspect 66ed1d36ccde
+  488  wget 172.17.0.3
+  489  crul 172.17.0.3
+  490  curl 172.17.0.3
+  491  clear
+  492  curl 172.17.0.3
+  493  docker run -d -p 8080:80 --name myapp nginx
+  494  ifcofig
+  495  ifconfig
+  496  ckear
+  497  clear
+  498  docker ps
+  499  docker run -d -P --name myapp2 nginx
+  500  docker ps
+  501  mkdir app
+  502  cd app
+  503  vi index.html
+  504  cd ..
+  505  docker run -P -v /home/ubuntu/app/:/usr/share/nginx/html/ nginx
+  506  docker run -P --name myapp3  -v /home/ubuntu/app/:/usr/share/nginx/html/ nginx
+  507  docker run -d  -P --name myapp3  -v /home/ubuntu/app/:/usr/share/nginx/html/ nginx
+  508  docker run -d  -P --name myapp4  -v /home/ubuntu/app/:/usr/share/nginx/html/ nginx
+  509  docker ps
+  510  cd app/
+  511  vi app.html
+  512  docker exec -it c32147ca6689 /bin/bash
+  513  clear
+  514  docker ps
+  515  docker inspect c32147ca6689
+  516  clear
+  517  ls
+  518  docker ps
+  519  docker rm -f $(docker ps -a -q)
+  520  docker images
+  521  docker rmi -f $(docker images -q)
+  522  docker images
+  523  docker ps
+  524  docker ps -a
+  525  clear
+  526  docker run -d ubuntu
+  527  docker ps
+  528  docker ps -a
+  529  docker -it 874eba2c8451 bash
+  530  docker run -it ubuntu bash
+  531  docker ps
+  532  docker commit f3045643d64d myimg
+  533  docker ps
+  534  docker images
+  535  docker run -it myimg bash
+  536  docker commit f3045643d64d myimg
+  537  docker images
+  538  docker commit 7698f282e524  myimg
+  539  docker images
+  540  docker commit f3045643d64d myimg1
+  541  docker images
+  542  docker run -it 1dfc851f91f0 bash
+  543  docker commit ad4ab20deafb myimage5
+  544  docker images
+  545  docker ps
+  546  docker exec -it ad4ab20deafb bash
+  547  docker commit ad4ab20deafb myimage6
+  548  ls
+  549  docker images
+  550  docker run -it myimage6
+  551  docker images
+  552  docker rmi -f $(docker images -q)
+  553  docker images
+  554  docker rm -f $(docker ps -a -q)
+  555  docker rmi -f $(docker images -q)
+  556  docker imags
+  557  docker images
+  558  docker ps -a
+  559  clear
+  560  docker run -d nginx bash
+  561  ls
+  562  docker ps
+  563  docker ps -a
+  564  docker exec -it 1af04eb50f18 bash
+  565  docker run -d -it nginx bash
+  566  ls
+  567  docker ps
+  568  docker exec -it 618e467fb1de
+  569  docker exec -it 618e467fb1de bash
+  570  docker ps
+  571  docker commit 618e467fb1de mynginx
+  572  docker run -d -P mynginx
+  573  docker ps
+  574  docker ps -a
+  575  docker run -d -P -it  mynginx
+  576  docker ps -a
+  577  docker ps 
+  578  docker inspect 618e467fb1de
+  579  curl 172.17.0.2
+  580  docker ps
+  581  ls
+  582  docker exec -it 618e467fb1de bash
+  583  docker exec -it 1bc6f8bf5956  bash
+  584  ls
+  585  docker ps
+  586  docker stop 1bc6f8bf5956 618e467fb1de
+  587  docker ps
+  588  docker rmi -f $(docker images -q)
+  589  docker rm -f $(docker ps -a -q)
+  590  docker ps
+  591  docker ps -a
+  592  docker iamges
+  593  docker images
+  594  clear
+  595  docker run -d nginx
+  596  docker images
+  597  docker ps -a
+  598  docker ps
+  599  docker exec -it 4f371e5ef4a5 /bin/bash
+  600  docker run -d nginx
+  601  docker exec -it 4f371e5ef4a5 /bin/bash
+  602  docker commit 4f371e5ef4a5 mynginx
+  603  docker images
+  604  docker run -d -P mynginx
+  605  docker ps
+  606  history
+  607  docker images
+  608  docker tag e900bff8b4e7 nmorkar/mynginx:v1
+  609  docker images
+  610  docker login
+  611  docker push nmorkar/mynginx:v1
+  612  ls
+  613  cd ..
+  614  ls
+  615  cd devop_notes/
+  616  ls
+  617  mkdir docker
+  618  cd docker/
+  619  ls
+  620  vi Dockerfile
+  621  docker build -t myimage1:v2 .
+  622  vi Dockerfile
+  623  docker build -t myimage1:v2 .
+  624  docker images
+  625  docker run -it 93e59f622972 bash
+  626  ls
+  627  clear
+  628  l
+  629  dfimage --help
+  630  clear
+  631  cd ..
+  632  ls
+  633  git staus
+  634  git status
+  635  git add .
+  636  git status
+  637  ls
+  638  history >> history1.txt
