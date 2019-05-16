@@ -17,3 +17,6 @@ XhwbsZ7pgH9tIjW&d!7Zrf5zpMi%st?n
 
 ec2-3-16-13-171.us-east-2.compute.amazonaws.com
 	
+AWX 
+Anisble galaxy
+https://galaxy.ansible.com/mrlesmithjr/apache2
