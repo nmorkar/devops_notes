@@ -1,0 +1,189 @@
+https://www.surveymonkey.com/r/L2FRKR2
+
+https://github.com/anotherangle/maven-build-demo
+
+shivaesb9@gmail.com
+
+usermod -aG docker (your_user)
+
+Installing Jenkins
+
+apt-get update
+apt-get install openjdk-8-jdk 
+java –version
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add
+echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+apt-get update
+apt-get install jenkins
+ 
+
+
+
+https://github.com/anotherangle/java-demos
+
+
+https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe
+
+https://the.earth.li/~sgtatham/putty/latest/w64/puttygen.exe
+
+#!/bin/bash
+mkdir /home/ubuntu/test
+mkdir /home/ubuntu/test2
+
+
+
+sudo su
+apt-get update
+
+apt-get install apache2
+cd /var/www/html
+
+
+
+git config --global user.name "Your Name"
+git config --global user.email "Your email"
+
+
+
+
+
+
+
+Create a set of SSH key for the machine using following command
+  ssh-keygen
+Now this has generated pair of keys, one is public & other is private
+Now we need to copy the public key and add it in the deploy key
+section of our remote repo
+The location of our keys will be  /root/.ssh/
+Copy the content of id_rsa.pub
+Add the copied key in your respective repository.
+If you are using older repositories, you need to add the remote for
+SSH url.
+so add using git remote add origin (your_url)
+then try pushing your code
+
+
+git remote add origin (your repo url)
+git push origin master
+
+
+
+
+aws ec2 describe-instances
+
+
+aws ec2 run-instances --image-id ami-1a2b3c4d --count 1 --instance-type t2.micro --key-name MyKeyPair --security-groups MySecurityGroup
+aws ec2 run-instances --image-id ami-0c55b159cbfafe1f0  --count 1 --instance-type t2.micro --key-name MyKeyPair --security-groups MySecurityGroup
+
+ami-0c55b159cbfafe1f0
+mydbinstance.cvx6eqacgzwd.us-east-2.rds.amazonaws.com
+
+--Ansible installation command
+apt-get update
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+apt-add-repository "deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main"
+apt-get update
+apt-get install ansible
+
+ansible --version
+
+
+
+To get the facts
+
+ansible group_name -m setup
+
+
+ansible-playbook playbookname --syntax-check
+
+----handlers------------\
+
+---
+- hosts: web
+  tasks:
+    - name: copy some config
+      copy:
+        src: copy.html
+        dest: /tmp/
+      notify:
+        - restart-apache
+    - name: directory
+      file:
+        name: /tmp/test3
+        state: directory
+  handlers:
+    - name: restart-apache
+      service:
+        name: apache2
+        state: restarted
+
+
+-------------multi users
+
+
+- hosts: web
+  tasks:
+    - name: add several users
+      user:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - testuser1
+        - testuser2
+    - name: multiple packages
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - apache2
+        - mysql-client
+        - vim
+        - gcc
+----------------------------
+
+
+
+https://github.com/anotherangle/new-relic-agent-ansible-role/blob/master/new_relic_agent/tasks/main.yml
+
+
+
+Installing Docker
+
+
+
+apt-get update
+
+apt-get install docker.io
+
+docker --version
+
+docker ps -a
+
+docker ps
+
+ docker run centos
+ 
+  docker ps -a
+  
+   docker run -it ubuntu
+
+
+
+
+
+
+docker rmi -f $(docker images -q)
+docker rm -f $(docker ps -a -q)
+docker ps -a
+docker images
+docker run -d nginx
+docker images
+docker ps -a
+docker ps
+docker exec -it 4f371e5ef4a5 /bin/bash
+docker commit 4f371e5ef4a5 mynginx
+docker images
+docker run -d -P mynginx
+
+
+docker build -t youriamge .
